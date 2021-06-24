@@ -9,15 +9,15 @@ AnyFolder EnvironmentModel = {
     AnyRefNode GroundNode = {
       sRel = {1/2*.Dim.SeatLength, -.Dim.BackRestHeight, 0};
     };
-    /*AnyRefNode BathtubNode = {
-        sRel = {-.Dim.BathtubLength/3-0.01,-.Dim.BathtubHeight-0.02,0};
+    AnyRefNode BathtubNode = {
+        sRel = {-.Dim.BathtubLength/3+0.05,-.Dim.BathtubHeight-0.12,0};
         AnyDrawSTL bathtub = {
           FileName = "bathtub.stl";
           ScaleXYZ = {0.001, 0.001, 0.001};
           RGB = {1, 0.714, 0.757};
           Transparency = 0.8;
         };
-      };*/
+      };
 
   };  // Global reference frame
   

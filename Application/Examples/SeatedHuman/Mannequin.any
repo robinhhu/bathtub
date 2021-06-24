@@ -19,11 +19,11 @@ AnyFolder Mannequin = {
       AnyVar SternoClavicularProtraction = -22.91831;
       AnyVar SternoClavicularElevation = 11.45916;
       AnyVar SternoClavicularAxialRotation = -20.05352;
-      AnyVar GlenohumeralFlexion = 30;//10;
-      AnyVar GlenohumeralAbduction = 40;//10;
-      AnyVar GlenohumeralExternalRotation = -14.45473;
-      AnyVar ElbowFlexion = 70;//96.87876;
-      AnyVar ElbowPronation = 80;
+      AnyVar GlenohumeralFlexion = 25;//10;
+      AnyVar GlenohumeralAbduction = 50;//10;
+      AnyVar GlenohumeralExternalRotation = 20;//-14.45473;
+      AnyVar ElbowFlexion = 50;//96.87876;
+      AnyVar ElbowPronation = 50;
       AnyVar WristFlexion = 1.296386e-006;
       AnyVar WristAbduction = -5.573775e-005;
       AnyVar HipFlexion = 84.92631;
@@ -78,11 +78,11 @@ AnyFolder Mannequin = {
       AnyVar SternoClavicularElevation=0;    //This value is not used for initial position
       AnyVar SternoClavicularAxialRotation=0; //This value is not used for initial position
       
-      AnyVar GlenohumeralFlexion = 10; 
-      AnyVar GlenohumeralAbduction = 0; 
-      AnyVar GlenohumeralExternalRotation = 0; 
+      AnyVar GlenohumeralFlexion = 0; 
+      AnyVar GlenohumeralAbduction = 20; 
+      AnyVar GlenohumeralExternalRotation = -55; 
       
-      AnyVar ElbowFlexion = -50.0;
+      AnyVar ElbowFlexion = 0.0;
       AnyVar ElbowPronation = 0.0;
       
       AnyVar WristFlexion =0;

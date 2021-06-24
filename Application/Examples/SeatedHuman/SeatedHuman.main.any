@@ -35,7 +35,7 @@ Main = {
     AnyVar SeatGlobalLinYPos = 0;         ///< Seat Height
     AnyVar SeatGlobalZRot = -30;            ///< Forward seat inclination
     AnyVar BackRestHeadResRotZPos = 0;    ///< Rotation of the head rest wrt the back rest
-    AnyVar GlobalLegRestRotZPos = 60;     ///< Inclination of the leg rest
+    AnyVar GlobalLegRestRotZPos = 70;     ///< Inclination of the leg rest
     AnyVar GlobalBackRestRotZPos = 10;    ///< Back rest inclination
     AnyVar LegRestFootRestLinYPos = 0.1; ///< Position of the footrest along the leg rest
   }; // DrvPos
@@ -45,7 +45,7 @@ Main = {
     AnyVar PelvisSeatLinXVel = 0;         ///< Movement of the pelvis on the seat
     AnyVar SeatGlobalLinYVel = 0;         ///< Movement of the seat Height
     AnyVar SeatGlobalZRotVel = 0;         ///< Movement of seat inclination
-    AnyVar GlobalBackRestRotZVel = 20;     ///< Back rest inclination velocity
+    AnyVar GlobalBackRestRotZVel = 30;     ///< Back rest inclination velocity
     AnyVar GlobalLegRestRotZVel = 0;      ///< Leg rest inclination velocity
     AnyVar LegRestFootRestLinYVel = 0;    ///< Movement of the footrest along the leg rest
   }; // DrvVel
@@ -145,6 +145,43 @@ Main = {
     tEnd = 1;
     Gravity = {0.0, -9.81, 0.0};
     nStep = 5;
+    
+    //The study of sum of mascular force
+    //Right spine muscles
+    AnySearchFun MultifidiRightList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineRight.Multifidi.*.Fm";};
+    AnySearchFun ErectorSpinaeRightList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineRight.ErectorSpinae.*.Fm";};
+    AnySearchFun PsoasMajorRightList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineRight.PsoasMajor.*.Fm";};
+    AnySearchFun QuadratusLumborumRightList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineRight.QuadratusLumborum.*.Fm";};
+    AnySearchFun SemispinalisRigthList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineRight.SemispinalisRigth.*.Fm";};
+    AnySearchFun ThoracicMultifidiRigthList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineRight.ThoracicMultifidiRigth.*.Fm";};
+    //Left spine muscles
+    AnySearchFun MultifidiLeftList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineLeft.Multifidi.*.Fm";};
+    AnySearchFun ErectorSpinaeLeftList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineLeft.ErectorSpinae.*.Fm";};
+    AnySearchFun PsoasMajorLeftList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineLeft.PsoasMajor.*.Fm";};
+    AnySearchFun QuadratusLumborumLeftList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineLeft.QuadratusLumborum.*.Fm";};
+    AnySearchFun SemispinalisLeftList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineLeft.SemispinalisLeft.*.Fm";};
+    AnySearchFun ThoracicMultifidiLeftList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpineLeft.ThoracicMultifidiLeft.*.Fm";};
+    //middle
+    AnySearchFun SpinalisList = {Search = "Main.HumanModel.BodyModel.Trunk.MusclesSpine.Spinalis.*.Fm";};
+
+    //AnyVar MultifidiMaxForce = max(MultifidiList());
+    //AnyVar MultifidiMeanForce = mean(MultifidiList());
+    //Right spine forces
+    AnyVar MultifidiRightSumForce = sum(MultifidiRightList());
+    AnyVar ErectorSpinaeRightSumForce = sum(ErectorSpinaeRightList());
+    AnyVar PsoasMajorRightSumForce = sum(PsoasMajorRightList());
+    AnyVar QuadratusLumborumRightSumForce = sum(QuadratusLumborumRightList());
+    AnyVar SemispinalisRigthSumForce = sum(SemispinalisRigthList());
+    AnyVar ThoracicMultifidiRigthSumForce = sum(ThoracicMultifidiRigthList());
+    //left spine forces
+    AnyVar MultifidiLeftSumForce = sum(MultifidiLeftList());
+    AnyVar ErectorSpinaeLeftSumForce = sum(ErectorSpinaeLeftList());
+    AnyVar PsoasMajorLeftSumForce = sum(PsoasMajorLeftList());
+    AnyVar QuadratusLumborumLeftSumForce = sum(QuadratusLumborumLeftList());
+    AnyVar SemispinalisLeftSumForce = sum(SemispinalisLeftList());
+    AnyVar ThoracicMultifidiLeftSumForce = sum(ThoracicMultifidiLeftList());
+    //middle forces
+    AnyVar SpinalisSumForce = sum(SpinalisList());
     
     //Size of total force in the L5 Sacrum joint
     AnyVar L5SacrumReac = (Main.Model.HumanModel.Trunk.JointsLumbar.L5SacrumJnt.Constraints.Reaction.Fout[0]^2+
