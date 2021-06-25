@@ -33,9 +33,9 @@ Main = {
   AnyFolder DrvPos = {
     AnyVar PelvisSeatLinXPos = 0.05;      ///< Position of the pelvis on the seat
     AnyVar SeatGlobalLinYPos = 0;         ///< Seat Height
-    AnyVar SeatGlobalZRot = -30;            ///< Forward seat inclination
+    AnyVar SeatGlobalZRot = -40;            ///< Forward seat inclination
     AnyVar BackRestHeadResRotZPos = 0;    ///< Rotation of the head rest wrt the back rest
-    AnyVar GlobalLegRestRotZPos = 75;     ///< Inclination of the leg rest
+    AnyVar GlobalLegRestRotZPos = 57;     ///< Inclination of the leg rest
     AnyVar GlobalBackRestRotZPos = 10;    ///< Back rest inclination
     AnyVar LegRestFootRestLinYPos = 0.1; ///< Position of the footrest along the leg rest
   }; // DrvPos
@@ -45,7 +45,7 @@ Main = {
     AnyVar PelvisSeatLinXVel = 0;         ///< Movement of the pelvis on the seat
     AnyVar SeatGlobalLinYVel = 0;         ///< Movement of the seat Height
     AnyVar SeatGlobalZRotVel = 0;         ///< Movement of seat inclination
-    AnyVar GlobalBackRestRotZVel = 30;     ///< Back rest inclination velocity
+    AnyVar GlobalBackRestRotZVel = 33;     ///< Back rest inclination velocity
     AnyVar GlobalLegRestRotZVel = 0;      ///< Leg rest inclination velocity
     AnyVar LegRestFootRestLinYVel = 0;    ///< Movement of the footrest along the leg rest
   }; // DrvVel

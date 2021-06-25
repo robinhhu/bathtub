@@ -10,7 +10,7 @@ AnyFolder EnvironmentModel = {
       sRel = {1/2*.Dim.SeatLength, -.Dim.BackRestHeight, 0};
     };
     AnyRefNode BathtubNode = {
-        sRel = {-.Dim.BathtubLength/3+0.05,-.Dim.BathtubHeight-0.12,0};
+        sRel = {-.Dim.BathtubLength/3+0.05,-.Dim.BathtubHeight-0.16,0};
         AnyDrawSTL bathtub = {
           FileName = "bathtub.stl";
           ScaleXYZ = {0.001, 0.001, 0.001};

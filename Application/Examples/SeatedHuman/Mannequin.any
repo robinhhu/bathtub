@@ -19,11 +19,11 @@ AnyFolder Mannequin = {
       AnyVar SternoClavicularProtraction = -22.91831;
       AnyVar SternoClavicularElevation = 11.45916;
       AnyVar SternoClavicularAxialRotation = -20.05352;
-      AnyVar GlenohumeralFlexion = 30;//10; //as human grow bigger, the value should get bigger(arm longer)
-      AnyVar GlenohumeralAbduction = 45;//10;//as human grow bigger, the value should get smaller(width bigger)
-      AnyVar GlenohumeralExternalRotation = 20;//-14.45473;
-      AnyVar ElbowFlexion = 45;//96.87876; //as human grow bigger, the value should get smaller
-      AnyVar ElbowPronation = 50;
+      AnyVar GlenohumeralFlexion = 10;//10; //as human grow bigger, the value should get bigger(arm longer)
+      AnyVar GlenohumeralAbduction = 73;//10;//as human grow bigger, the value should get smaller(width bigger)
+      AnyVar GlenohumeralExternalRotation = -2.0;//-14.45473;
+      AnyVar ElbowFlexion = 70;//96.87876; //as human grow bigger, the value should get smaller
+      AnyVar ElbowPronation = 40;
       AnyVar WristFlexion = 10;//1.296386e-006;
       AnyVar WristAbduction = -5.573775e-005;
       AnyVar HipFlexion = 84.92631;
@@ -79,8 +79,8 @@ AnyFolder Mannequin = {
       AnyVar SternoClavicularAxialRotation=0; //This value is not used for initial position
       
       AnyVar GlenohumeralFlexion = 0; 
-      AnyVar GlenohumeralAbduction = 15; //human bigger, value smaller
-      AnyVar GlenohumeralExternalRotation = -60;  //huamn bigger, value smaller
+      AnyVar GlenohumeralAbduction = 30; //human bigger, value smaller
+      AnyVar GlenohumeralExternalRotation = -40;  //huamn bigger, value smaller
       
       AnyVar ElbowFlexion = 0.0;
       AnyVar ElbowPronation = 0.0;
