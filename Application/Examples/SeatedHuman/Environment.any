@@ -52,32 +52,6 @@ AnyFolder EnvironmentModel = {
       AnyVar ArmRestHeight = 0.32;    
     }; // ChairDimensions 
     
-    //--------------------------------------------------------
-    // bathtub
-    //--------------------------------------------------------
-    
-    /*AnySeg bathtub = {
-      
-      AnyFolder &Dim = .ChairDimensions;
-      Mass = 0.0;
-      
-      AnyVar Ixx = 1/12*(Dim.BathtubLength^2+Dim.BathtubWidth^2);
-      AnyVar Iyy = 1/12*(Dim.BathtubHeight^2+Dim.BathtubWidth^2);
-      AnyVar Izz = 1/12*(Dim.BathtubLength^2+Dim.BathtubHeight^2);
-      Jii = {Ixx, Iyy, Izz};
-    AnyRefFrame Bathtub = {
-      AnyFolder &Dim = ChairDimensions;
-
-      AnyRefNode BathtubNode = {
-        sRel = {-.Dim.BathtubLength/3,-.Dim.BathtubHeight,0};
-        AnyDrawSTL bathtub = {
-          FileName = "bathtub.stl";
-          ScaleXYZ = {0.001, 0.001, 0.001};
-          RGB = {1, 0.714, 0.757};
-          Transparency = 0.8;
-        };
-      };
-    };*/
     
     //--------------------------------------------------------
     // BackRest
@@ -151,18 +125,6 @@ AnyFolder EnvironmentModel = {
         sRel = {0, -1/2*.Dim.SeatLength, 0};
       };
       
-      /*AnyRefNode BathtubNode = {
-        sRel = {.Dim.BathtubHeight,.Dim.BathtubLength/3,0};
-        ARel = {{0, 1, 0}, {-1, 0, 0}, {0, 0, 1}};
-        AnyDrawSTL bathtub = {
-          FileName = "bathtub.stl";
-          ScaleXYZ = {0.001, 0.001, 0.001};
-          RGB = {1, 0.714, 0.757};
-          Transparency = 0.8;
-        };
-      };*/
-
-
     }; // Seat 
     
     //-----------------------------------------------------
